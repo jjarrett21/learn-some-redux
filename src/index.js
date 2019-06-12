@@ -35,7 +35,7 @@ const todos = (state = [], action) => {
   }
 };
 
-const visibilityFiler = (state = "SHOW_ALL", action) => {
+const visibilityFilter = (state = "SHOW_ALL", action) => {
   switch (action.type) {
     case "SET_VISIBILITY_FILTER":
       return action.filter;
@@ -46,7 +46,7 @@ const visibilityFiler = (state = "SHOW_ALL", action) => {
 
 const todoApp = combineReducers({
   todos,
-  visibilityFiler
+  visibilityFilter
 });
 
 const store = createStore(todoApp);
@@ -104,7 +104,7 @@ class ToDoApp extends Component {
           Add Todo
         </button>
         <ul>
-          {this.props.todos.map(todo => (
+          {visibleTodos.map(todo => (
             <li
               key={todo.id}
               onClick={() => {
