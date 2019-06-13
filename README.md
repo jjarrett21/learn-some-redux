@@ -5,7 +5,7 @@
 ```bash
 $ clone the repo
 $ cd learn-some-redux
-$ mkdir dist
+$ mkdir dist `or` npm run build
 $ npm install
 ```
 
