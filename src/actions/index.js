@@ -1,9 +1,10 @@
+import * as uuid from 'uuid/v4';
+
 
 /* Action creators for components */
-let nextTodoId = 0;
 export const addTodo = (text) => ({
     type: 'ADD_TODO',
-    id: (nextTodoId++).toString(),
+    id: uuid(),
     text,
 });
 

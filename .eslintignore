@@ -1,0 +1,4 @@
+/dist/**
+jest.config.j
+webpack.*
+/src/api/api-types.ts
