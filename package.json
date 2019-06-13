@@ -28,6 +28,7 @@
     "deepfreeze": "^2.0.0",
     "es6": "0.0.7",
     "expect": "^24.8.0",
+    "history": "^4.9.0",
     "lodash": "^4.17.11",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
