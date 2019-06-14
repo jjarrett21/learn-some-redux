@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter as Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const FilterLink = ({ filter, children }) => (
+const FilterLink = ({props}) => (
   <Link
-    to={filter === "all" ? " " : filter}
+    to={props.match.params.filter === "all" ? " " : filter}
     style={{
       textDecoration: 'none',
       color: 'black'
     }}
   >
-    {children}
+    {this.props.children}
   </Link>
 );
 
