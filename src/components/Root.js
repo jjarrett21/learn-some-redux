@@ -8,8 +8,7 @@ import PropTypes from 'prop-types';
 const Root = ({store}) => (
     <Provider store={store}>
         <Router>
-            <Route path="/:filter" component={App} /> 
-            <Route path="/" component={App} /> 
+            <Route path="/:filter?" component={App} /> 
         </Router>
     </Provider>
 );

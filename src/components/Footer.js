@@ -1,29 +1,26 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import FilterLink from './FilterLink';
 
+import React from 'react';
+import FilterLink from './FilterLink';
 
 const Footer = () => (
     <p>
       Show:
             {' '}
-      <FilterLink filter="all"
+      <FilterLink filter='all'
   
       >
         All
               </FilterLink>
       {', '}
-      <FilterLink filter="active"
+      <FilterLink filter='active'
   
       >
         Active
               </FilterLink>
       {', '}
-      <FilterLink filter="completed"
-  
+      <FilterLink filter='completed'  
       >
-        Completed:
+        Completed
               </FilterLink>
     </p>
   );

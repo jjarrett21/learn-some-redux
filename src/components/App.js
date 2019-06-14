@@ -12,5 +12,11 @@ const App = () => (
     </div>
 );
 
+App.propTypes = {
+    params: PropTypes.shape({
+        filter: PropTypes.string,
+    }),
+};
+
 export default App;
 
