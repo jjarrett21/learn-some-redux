@@ -33,6 +33,7 @@ const todo = (state, action) => {
   export default todos;
 
   export const getVisibleTodos = (state, filter) => {
+
     switch (filter) {
       case "all":
         return state;

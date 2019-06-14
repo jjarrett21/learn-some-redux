@@ -5,10 +5,16 @@ import TodoList from './TodoList'
 import getVisibleTodos from '../reducers'
 
 
-const mapStateToProps = (state, {params}) => ({
-    todos: getVisibleTodos(state, params.filter || 'all'),
+const mapStateToProps = (state, {match: {params: {filter = 'all'}}}) => {
+    return getVisibleTodos(state, filter)
+
+
+}
+
+
+
+
     
-});
 
 // const mapDispatchToProps = (dispatch) =>({
 //     onTodoClick(id) {
@@ -21,7 +27,7 @@ const mapStateToProps = (state, {params}) => ({
     {onTodoClick: toggleTodo}
   )(TodoList));
 
-  export default VisibleTodoList;
+  export default withRouter(VisibleTodoList);
   
 
   

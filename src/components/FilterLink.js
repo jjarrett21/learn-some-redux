@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const FilterLink = ({props}) => (
+const FilterLink = ({children, match: {params:{filter='all'}}}) => (
   <Link
-    to={props.match.params.filter === "all" ? " " : filter}
-    style={{
+    to={filter === "all" ? " " : filter}
+    activeStyle={{
       textDecoration: 'none',
-      color: 'black'
+      color: 'blue'
     }}
   >
-    {this.props.children}
+    {children}
   </Link>
 );
 
@@ -19,4 +19,4 @@ FilterLink.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default FilterLink;
+export default withRouter(FilterLink);
